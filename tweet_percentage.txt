@@ -1,0 +1,15 @@
+user_verified
+    if orig = 100 %
+    if rt = 90%
+
+user_created > 1 year, user_follower > 707
+    if orig = 80%
+    if rt = 70%
+
+user_created > 1 year, user_follower < 707
+    if_orig = 70%
+    if_rt = 60%
+
+user_created < 1 year, user_follower < 707
+    if orig = 60%
+    if rt = 50%

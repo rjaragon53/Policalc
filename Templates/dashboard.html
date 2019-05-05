@@ -1,0 +1,197 @@
+{% include 'layout.html' %}
+{% include 'includes/_navbar.html' %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<body id="home" class="scrollspy">
+
+    <section class="section center">
+
+        <!-- Charts -->
+        <div class="row">
+            <div class="col s10 offset-s1">
+                <h3 align="center"> Survey Concerns </h3>
+                <canvas id="myChart" width="150" height="30"></canvas>
+            </div>
+            <div class="col s10 offset-s1">
+                <h3 align="center"> Politician Rating </h3>
+                <canvas id="myChart2" width="150" height="30"></canvas>
+            </div>
+        </div>
+
+            <script>
+            var ctx = document.getElementById('myChart');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+            </script>
+
+
+<!-- BAR CHART-->
+
+            <script>
+                var ctx = document.getElementById('myChart2');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+<!-- end of charts -->
+
+    <h3 align="center"> Political Personalities </h3>
+            <div class="row">
+                <div class="col s12 m2 offset-m1">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="static/images/duterte.jpg" height="150" width="300">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Rodrigo Duterte<i class="material-icons right">more_vert</i></span>
+                            <p><a href="/duterte">View</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Rodrigo Duterte<i class="material-icons right">close</i></span>
+                            <p>Rodrigo Roa Duterte, KGCR, also known as Digong and Rody, is a Filipino politician who is the 16th and current President of the Philippines and the first from Mindanao, to hold the office. He is the chair of the ruling
+                                PDP–Laban party.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col s12 m2">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="static/images/robredo2.jpg" height="150" width="200">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Leni Robredo<i class="material-icons right">more_vert</i></span>
+                            <p><a href="/robredo">View</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Leni Robredo<i class="material-icons right">close</i></span>
+                            <p>Maria Leonor "Leni" Gerona vda. de Robredo is a Filipina lawyer and social activist who is the 14th and current Vice President of the Philippines.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col s12 m2">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="static/images/roxas3.jpg" alt="Image" height="150" width="200">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Mar Roxas<i class="material-icons right">more_vert</i></span>
+                            <p><a href="/roxas">View</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Leni Robredo
+                                <i class="material-icons right">close</i></span>
+                            <p>Maria Leonor "Leni" Gerona vda. de Robredo is a Filipina lawyer and social activist who is the 14th and current Vice President of the Philippines.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col s12 m2">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="static/images/sotto.jpg" height="150" width="200">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Tito Sotto<i class="material-icons right">more_vert</i></span>
+                            <p><a href="/sotto">View</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Tito Sotto<i class="material-icons right">close</i></span>
+                            <p>Vicente "Tito" Castelo Sotto III is a Filipino politician and the 29th and current Senate President of the Philippines. Sotto served as Vice Mayor of Quezon City, the Philippines' most populous city, from 1988 to 1992.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m2">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="static/images/pimentel3.jpg" height="150" width="200">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Koko Pimentel<i class="material-icons right">more_vert</i></span>
+                            <p><a href="/pimentel">View</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Koko Pimentel<i class="material-icons right">close</i></span>
+                            <p>Aquilino Martin de la Llana Pimentel III, commonly known as Koko Pimentel, is a Filipino politician who is the 28th Senate President of the Philippines from 2016 to 2018. He is also the current president of the Partido
+                                Demokratiko
+                                Pilipino-Lakas ng Bayan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+{% include 'includes/_footer.html' %}

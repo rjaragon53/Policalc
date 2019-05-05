@@ -1,0 +1,105 @@
+{% include 'layout.html' %}
+<head>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body id="home" class="scrollspy">
+    {% include 'includes/_navbar.html' %}
+    <!-- Section: Slider -->
+    <section class="slider">
+        <ul class="slides">
+            <li>
+                <img src="static/images/logo1.png">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h1></h1>
+                    <h5 class="light grey-text text-lighten-3 hide-on-small-only"></h5>
+                </div>
+            </li>
+            <li>
+                <img src="static/images/twitter.jpg">
+                <!-- random image -->
+                <div class="caption left-align">
+                    <h2>Twitter</h2>
+                    <h5>Twitter API</h5>
+                    <h5 class="light grey-text text-lighten-3 hide-on-small-only">Tweets are gathered using the Twitter API</h5>
+                </div>
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- Section: Icon Boxes -->
+    <section class="section section-icons grey lighten-4 center">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card-panel">
+                        <i class="material-icons large teal-text">cloud_circle</i>
+                        <h4>Gather Tweets</h4>
+                        <p>The system will gather tweets from Twitter using Twitter API</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card-panel">
+                        <i class="material-icons large teal-text">thumbs_up_down</i>
+                        <h4>Analyze</h4>
+                        <p>Gathered tweets will be analyzed by the system.</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card-panel">
+                        <i class="material-icons large teal-text">insert_chart_outlined</i>
+                        <h4>Visualize</h4>
+                        <p>Results of the analyzed tweets will be visualized in the system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Contact -->
+    <section id="contact" class="section section-contact scrollspy">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card-panel teal white-text center">
+                        <i class="material-icons">email</i>
+                        <h5>Contact Us</h5>
+                        <p>For concerns regarding with our system kindly contact us and tell us about your concerns.</p>
+                    </div>
+                    <ul class="collection with-header">
+                        <li class="collection-header">
+                            <h4>Location</h4>
+                        </li>
+                        <li class="collection-item">University of Southeastern Philippines</li>
+                        <li class="collection-item">Inigo Street Bo. Obrero, Poblacion District</li>
+                        <li class="collection-item">Davao City, 8000 Davao del Sur</li>
+                    </ul>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card-panel grey lighten-3">
+                        <h5>Please fill out this form</h5>
+                        <div class="input-field">
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="Phone">
+                        </div>
+                        <div class="input-field">
+                            <textarea class="materialize-textarea" placeholder="Enter Message"></textarea>
+                        </div>
+                        <input type="submit" value="Submit" class="btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+{% include 'includes/_footer.html' %}

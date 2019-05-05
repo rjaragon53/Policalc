@@ -1,0 +1,54 @@
+{
+    "location": [
+        {
+            "city": "quezon",
+            "lat": 14.6488,
+            "long": 121.0509
+        },
+        {
+            "city": "caloocan",
+            "lat": 14.6495304,
+            "long": 120.9678802
+        },
+        {
+            "city": "davao",
+            "lat": 7.07306,
+            "long": 125.61278
+        },
+        {
+            "city": "manila",
+            "lat": 14.6042,
+            "long": 120.9822
+        },
+        {
+            "city": "zamboanga",
+            "lat": 6.91028,
+            "long": 122.07389
+        },
+        {
+            "city": "cebu",
+            "lat": 10.31672,
+            "long": 123.89071
+        },
+        {
+            "city": "antipolo",
+            "lat": 14.62578,
+            "long": 121.12251
+        },
+        {
+            "city": "dazmarinas",
+            "lat": 14.32944,
+            "long": 120.93667
+        },
+        {
+            "city": "taguig",
+            "lat": 14.5243,
+            "long": 121.0792
+        },
+        {
+            "city": "pasig",
+            "lat": 14.58691,
+            "long": 121.0614
+        }
+    ]
+}

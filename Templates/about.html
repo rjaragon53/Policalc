@@ -1,0 +1,140 @@
+{% include 'layout.html' %}
+
+{% block body %}
+<section id="content">
+
+    <body id="home" class="scrollspy">
+        {% include 'includes/_navbar.html' %}
+        <div class="container">
+            <div class="section">
+                <h3>About the System</h3>
+                <div class="divider"></div>
+            </div>
+
+            <div class="section-top-border">
+                <h3 class="mb-30">PoliCalc</h3>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <blockquote class="generic-blockquote">
+                            PoliCalc started out as an idea to bridge the gap between Traditional Media and Social Media -
+                            as both medium of spreading information has some effect when it comes to the Political stand of many Filipinos.
+                            As a growing nation with easy access to the internet, the Philippines continues to rely on information spread on these medium.
+                            And while collecting data, analyzing, and publishing it for the public to see is an easy job for companies like Social Weather Stations and Pulse Asia,
+                            Social media data is a bit trickier. Mining through hundreds - if not thousands - of raw, uncleaned data would be meaningless to a layperson.
+                            For this reason, PoliCalc was created. By gathering, analyzing, and visualizing data from Social Media platforms such as Twitter,
+                            it would hopefully bridge a gap and solve a problem.
+                            For now, PoliCalc is here to inform the nation that the usefulness of their phones, tablets, and computers aren't just to share their
+                            thoughts, opinions, and sentiments. but to learn something from it along the way.
+
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="section">
+                <h3>The Developers</h3>
+                <div class="divider"></div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m8 l9">
+                    <div class="card-panel grey lighten-5 z-depth-3">
+                        <div class="row valign-wrapper">
+                            <div class="circle">
+                                <img src="static/images/dwight2.jpg" alt="" class="circle responsive-img valign" width="130px" height="130px">
+                            </div>
+                            <div class="col s8 m10">
+                                <span class="black-text">
+                                    <h5> DWIGHT KENN CABALLERO </h5>
+                                    <p> Dwight is a BS Computer Science student at USeP. His main task in the creation of PoliCalc was writing the main components
+                                        and main parts of the system. </p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m8 l9 offset-l3 offset-m4">
+                    <div class="card-panel grey lighten-5 z-depth-3">
+                        <div class="row valign-wrapper">
+                            <div class="circle">
+                                <img src="static/images/rj.jpg" alt="" class="circle responsive-img valign" width="130px" height="130px">
+                            </div>
+                            <div class="col s8 m10">
+                                <span class="black-text">
+                                    <h5> REX JOHN ARAGON </h5>
+                                    <p> Rex John, or more commonly called RJ, is a BS Computer Science student at USeP. His main task in the project
+                                        was writing some code for back-end part of the system. </p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m8 l9">
+                    <div class="card-panel grey lighten-5 z-depth-3">
+                        <div class="row valign-wrapper">
+                            <div class="circle">
+                                <img src="static/images/rsz__mg_7423.jpg" alt="" class="circle responsive-img valign">
+                            </div>
+                            <div class="col s8 m10">
+                                <span class="black-text">
+                                    <h5> BERWYN DEJANIO </h5>
+                                    <P> Berwyn is a BS Computer Science student at USeP. His main task in the group was writing some code for the front-end part
+                                        of the system and documenting the project. </p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card-panel teal white-text center">
+                        <i class="material-icons">email</i>
+                        <h5>Contact Us</h5>
+                        <p>Have a question? Suggestion? Comment? Contact us and we'll get on it!</p>
+                    </div>
+                    <ul class="collection with-header">
+                        <li class="collection-header">
+                            <h4>Location</h4>
+                        </li>
+                        <li class="collection-item">University of Southeastern Philippines</li>
+                        <li class="collection-item">Inigo Street Bo. Obrero, Poblacion District</li>
+                        <li class="collection-item">Davao City, 8000 Davao del Sur</li>
+                    </ul>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card-panel grey lighten-3">
+                        <h5>Please fill out this form</h5>
+                        <div class="input-field">
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="Phone">
+                        </div>
+                        <div class="input-field">
+                            <textarea class="materialize-textarea" placeholder="Enter Message"></textarea>
+                        </div>
+                        <input type="submit" value="Submit" class="btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end container-->
+</section>
+</body>
+{% endblock %}
+{% include 'includes/_footer.html' %}

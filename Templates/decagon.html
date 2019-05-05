@@ -1,0 +1,138 @@
+<!-- Redirect if all process is done -->
+{% if redirect %}
+<meta http-equiv="refresh" content="3;url=decagon" />
+{% endif %}
+
+{% include 'layout.html' %}
+
+<body id="home" class="scrollspy">
+
+    {% if change_ip %}
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4 style="text-align:center">CHANGE IP ADDRESS</h4>
+            <p>You need to change IP Address in order for the system to avoid limit blocking to the Google Translate API through Googletrans. This is a way of the developers
+            to avoid unnecessary errors during system runtime.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat teal white-text">I've Changed the IP Adress!</a>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Nav Bar -->
+    <div class="navbar-fixed">
+        <nav class="teal">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="/index" class="center brand-logo">PoliCalc</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div style="height:80px"></div>
+
+    <section>
+        <div class="row">
+
+            <!-- System Run -->
+            <div class="col s4 offset-s2">
+                <div class="card">
+
+                    <div class="card-image">
+                        <img src="static/images/system.jpg" style="max-width:150px; margin-left: auto; margin-right: auto;">
+                    </div>
+
+                    <div class="card-content" style="padding:0px">
+                        <h3 class="flow-text" style="text-align:center; margin:10px">FULL RUN (weekly)</h3>
+                        <p style="text-align:center; margin:10px">This action will perform a full system run starting from gathering of tweets, performing sentiment analysis, to reflecting the analyzed data
+                            to the Web Application.</p>
+                    </div>
+
+                    <div class="card-action" style="text-align:center">
+                        <a href="/decagon_{{next_process}}" onclick="loadrun()" class="waves-effect waves-light btn run"><i class="material-icons left">directions_run</i>RUN</a>
+                        {% if next_run %}<p>Next Run: {{next_run}}</p>{% endif %}
+                        <div class="progress prun" style="display:none">
+                            <div class="indeterminate"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Gather RSS -->
+            <div class="col s4">
+                <div class="card">
+
+                    <div class="card-image">
+                        <img src="static/images/rss.png" style="max-width:150px; margin-left: auto; margin-right: auto;">
+                    </div>
+
+                    <div class="card-content" style="padding:0px">
+                        <h3 class="flow-text" style="text-align: center; margin:10px; margin-top:18px">GATHER RSS (daily)</h3>
+                        <p style="text-align: center; margin:10px">This action will gather RSS (Really Simple Syndication) containing national and local news articles from various
+                            news sources in the Phiilippines.</p>
+                    </div>
+
+                    <div class="card-action" style="text-align:center">
+                        <a href="/decagon_rss" onclick="loadrss()" class="waves-effect waves-light btn rss"><i class="material-icons left">cloud_download</i>GATHER</a>
+                        {% if next_rss %}<p>Next Gather: {{next_rss}}</p>{% endif %}
+                        <div class="progress prss" style="display:none">
+                            <div class="indeterminate"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div style="height:80px"></div>
+    {% include 'includes/_footer.html' %}
+
+    <script>
+        $(document).ready(function() {
+            $('.modal').modal();
+            $('#modal1').modal('open');
+        });
+
+        function loadrun(){
+            $('.prun').show();
+            $(".run").addClass("disabled");
+            $(".rss").addClass("disabled");
+            M.toast({
+                html: '{{process}}',
+                displayLength: 3000
+            });
+        };
+
+        function loadrss(){
+            $('.prss').show();
+            $(".run").addClass("disabled");
+            $(".rss").addClass("disabled");
+            M.toast({
+                html: '{{process}}',
+                displayLength: 3000
+            });
+        };
+    </script>
+
+    {% if disable_rss %}<script>
+        $(document).ready(function() {
+            $(".rss").addClass("disabled");
+        });
+    </script>{% endif %}
+    {% if disable_run %}<script>
+        $(document).ready(function() {
+            $(".run").addClass("disabled");
+        });
+    </script>{% endif %}
+    {% if end_process %}<script>
+        $(document).ready(function() {
+            M.toast({
+                html: '{{end_process}}'
+            });
+        });
+    </script>{% endif %}
